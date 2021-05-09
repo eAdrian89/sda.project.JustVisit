@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<body>
+<th:block th:fragment="js_scripts">
+  <script th:src="@{js/main.js}"></script>
+  <script th:src="@{js/minified.js}"></script>
+  </th:block>
+</body>
+</html>
