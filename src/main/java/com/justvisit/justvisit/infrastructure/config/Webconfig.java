@@ -1,4 +1,4 @@
-package com.justvisit.justvisit.config;
+package com.justvisit.justvisit.infrastructure.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
