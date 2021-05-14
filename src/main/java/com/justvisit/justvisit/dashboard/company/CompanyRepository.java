@@ -1,6 +1,5 @@
-package com.justvisit.justvisit.dashboard.dao;
+package com.justvisit.justvisit.dashboard.company;
 
-import com.justvisit.justvisit.dashboard.model.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CompanyRepository extends JpaRepository<Company,Integer> {

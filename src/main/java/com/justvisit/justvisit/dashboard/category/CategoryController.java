@@ -1,7 +1,7 @@
-package com.justvisit.justvisit.dashboard.web.controller;
+package com.justvisit.justvisit.dashboard.category;
 
-import com.justvisit.justvisit.dashboard.model.Category;
-import com.justvisit.justvisit.dashboard.service.CategoryService;
+import com.justvisit.justvisit.dashboard.category.Category;
+import com.justvisit.justvisit.dashboard.category.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

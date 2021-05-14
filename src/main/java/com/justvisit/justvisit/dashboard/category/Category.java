@@ -1,6 +1,7 @@
-package com.justvisit.justvisit.dashboard.model;
+package com.justvisit.justvisit.dashboard.category;
 
 
+import com.justvisit.justvisit.dashboard.company.Company;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

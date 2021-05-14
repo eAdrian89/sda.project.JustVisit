@@ -1,7 +1,8 @@
-package com.justvisit.justvisit.dashboard.service;
+package com.justvisit.justvisit.dashboard.category;
 
-import com.justvisit.justvisit.dashboard.dao.CategoryRepository;
-import com.justvisit.justvisit.dashboard.model.Category;
+import com.justvisit.justvisit.dashboard.category.CategoryRepository;
+import com.justvisit.justvisit.dashboard.category.Category;
+import com.justvisit.justvisit.dashboard.category.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

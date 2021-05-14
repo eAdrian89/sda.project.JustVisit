@@ -1,6 +1,6 @@
-package com.justvisit.justvisit.dashboard.service;
+package com.justvisit.justvisit.dashboard.category;
 
-import com.justvisit.justvisit.dashboard.model.Category;
+import com.justvisit.justvisit.dashboard.category.Category;
 
 import java.util.List;
 
