@@ -15,45 +15,27 @@
     <div th:replace="/fragments/header::header"></div>
     <div th:replace="/fragments/navbar::navbar"></div>
     <div id="main" class="home">
-
-
         <section id="elements">
-
-
             <div class="row margin1">
                 <h3 class="sub-header">Add Category</h3>
                 <div class="">
-                    <!-- Forms -->
                     <h5 class="sub-header"></h5>
-
-
                     <form action="#" th:action="@{/save}"
                           th:object="${categories}" method="POST">
-
-                        <!-- Add hidden form field to handle update -->
                         <input type="hidden" th:field="*{id}"/>
-
-                        <input type="text" th:field="*{name}"
+                        <input id="name" type="text" th:field="*{name}"
                                class="form-control mb-4 col-4" placeholder="Category Name" required>
-
                         <input type="text" th:field="*{description}"
                                class="form-control mb-4 col-4" placeholder="Description" required>
-
                         <input type="text" th:field="*{icon}"
                                class="form-control mb-4 col-4" placeholder="icon name" required>
-
                         <input type="text" th:field="*{pictureUrl}"
                                class="form-control mb-4 col-4" placeholder="picture url" required min="0">
-
                         <button type="submit" class="btn btn-success col-2">Save</button>
-
                     </form>
-
                 </div>
             </div>
         </section>
-
-
         <div th:replace="/fragments/footer::footer"></div>
     </div>
     <div th:replace="/fragments/js_scripts::js"></div>

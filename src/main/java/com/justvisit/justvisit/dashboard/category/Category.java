@@ -5,6 +5,7 @@ import com.justvisit.justvisit.dashboard.company.Company;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,8 +13,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Entity
-@Table
 public class Category {
 
     @Id
@@ -39,7 +40,4 @@ public class Category {
     @OneToMany
     private List<Company> companyList;
 
-    public List<Company> getCompanyList() {
-        return companyList;
-    }
 }

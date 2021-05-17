@@ -1875,11 +1875,13 @@ ul.custom li:before {
     padding-right: 7px;
 }
 /* Buttons */
-
+.btn, .btn .btn-blue{
+    background-color: #007bff;
+}
 .btn,
-.btn .btn-primary {
+.btn .btn-primary  {
     display: inline-block;
-    background: transparent;
+    background-color: #007bff;
     text-transform: uppercase;
     color: #fff;
     border-radius: 0;

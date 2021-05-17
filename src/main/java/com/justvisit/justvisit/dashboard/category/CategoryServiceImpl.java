@@ -1,17 +1,15 @@
 package com.justvisit.justvisit.dashboard.category;
 
-import com.justvisit.justvisit.dashboard.category.CategoryRepository;
-import com.justvisit.justvisit.dashboard.category.Category;
-import com.justvisit.justvisit.dashboard.category.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
-    private CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
     @Autowired
     public CategoryServiceImpl(CategoryRepository categoryRepository) {
@@ -25,8 +23,20 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category findById(int theId) {
-        return null;
+        Optional<Category> result = categoryRepository.findById(theId);
+
+        Category theProduct = null;
+
+        if (result.isPresent()) {
+            theProduct = result.get();
+        } else {
+            // we didn't find the product
+            throw new RuntimeException("Did not find product id - " + theId);
+        }
+
+        return theProduct;
     }
+
 
     @Override
     public void save(Category theProduct) {
@@ -35,7 +45,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void deleteById(int theId) {
-
+    public void deleteById(int id) {
+        categoryRepository.deleteById(id);
     }
 }

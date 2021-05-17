@@ -3,6 +3,7 @@
 */
 /*________  Dark Purple  ________  */
 
+
 .navbar,
 .pager li>a:hover,
 .pager li > a,
@@ -174,6 +175,14 @@ select.form-control,
 .bg-color1,
 .navbar-custom ul li a:after {
     background-color: #BC87BF;
+}
+.btn, .btn-blue{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-red{
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 .blog-post,
 .sub-heading span,

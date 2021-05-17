@@ -1,5 +1,6 @@
 package com.justvisit.justvisit.dashboard.company;
 
+import com.justvisit.justvisit.dashboard.category.Category;
 import com.justvisit.justvisit.dashboard.model.Services;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,10 @@ public class Company {
     private String name;
     private String location;
     private String logoPicture;
+
+    @OneToOne
+    private Category category;
+
     @OneToMany
     private List<Services> servicesList;
 
