@@ -38,14 +38,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-// Use this method to be able to log into h2-console
-
-//    @Override
-//    protected void configure(HttpSecurity httpSecurity) throws Exception {
-//        httpSecurity.authorizeRequests().antMatchers("/").permitAll().and()
-//                .authorizeRequests().antMatchers("/h2-console/**").permitAll();
-//        httpSecurity.csrf().disable();
-//        httpSecurity.headers().frameOptions().disable();
-//    }
-
+ //Use this method to be able to log into h2-console
+/*
+    @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.authorizeRequests().antMatchers("/").permitAll().and()
+                .authorizeRequests().antMatchers("/h2-console/**").permitAll();
+        httpSecurity.csrf().disable();
+       httpSecurity.headers().frameOptions().disable();
+    }
+*/
 }
