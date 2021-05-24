@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping("/company")
+@RequestMapping("/")
 public class CompanyController {
 
     private final CompanyRepository companyRepository;
@@ -17,7 +17,7 @@ public class CompanyController {
         this.companyRepository = companyRepository;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/companies")
     public String companiesList(Model model){
         List<Company> companyList = companyRepository.findAll();
         model.addAttribute("companies",companyList);
@@ -31,8 +31,8 @@ public class CompanyController {
         return "forms/companyForm";
     }
 
-    @PostMapping("/save")
-    public String saveCategory(@ModelAttribute("company") Company company) {
+    @PostMapping("/saveCompany")
+    public String saveCompany(@ModelAttribute("company") Company company) {
         companyRepository.save(company);
         return "redirect:/list";
     }

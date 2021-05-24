@@ -19,9 +19,19 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "location")
     private String location;
+    @Column(name = "logo_picture")
     private String logoPicture;
+
+    public Company(Long id, String name, String location, String logoPicture) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.logoPicture = logoPicture;
+    }
 
     @OneToOne
     private Category category;
