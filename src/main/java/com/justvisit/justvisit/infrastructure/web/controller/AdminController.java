@@ -1,4 +1,4 @@
-package com.justvisit.justvisit.dashboard.web.controller;
+package com.justvisit.justvisit.infrastructure.web.controller;
 
 import com.justvisit.justvisit.dashboard.category.Category;
 import com.justvisit.justvisit.dashboard.category.CategoryService;

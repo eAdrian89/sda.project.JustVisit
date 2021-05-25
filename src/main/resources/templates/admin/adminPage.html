@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Error page</title>
+    <meta charset="utf-8"/>
+
+</head>
+
+<div sec:authorize="isAuthenticated()">
+    Authenticated as <span sec:authentication="name"></span>
+
+    <tbody>
+    <tr th:each="partner : ${partner}">
+
+        <td th:text="${partner.firstName}"></td>
+        <br>
+        <td th:text="${partner.lastName}"></td>
+        <br>
+        <td th:text="${partner.id}"></td>
+        <br>
+        <td th:text="${partner.email}"></td>
+
+
+    </tr>
+    </tbody>
+    <h1>hdsdkjksjdls</h1>
+
+</div>
+</body>
+</html>

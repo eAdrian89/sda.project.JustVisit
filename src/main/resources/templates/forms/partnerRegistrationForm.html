@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>JustVisit</title>
+    <div th:replace="/fragments/styles::style"></div>
+</head>
+<body id="page-top">
+<div id="page-width">
+
+    <div th:replace="/fragments/navbar::navbar"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Login Page -->
+    <div class="login_page_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="create_account_area caa_pdngbtm">
+
+                        <h2 class="caa_heading">Create an account</h2>
+                        <div class="caa_form_area">
+                            <p>Please enter your details to create an account.</p>
+                            <div class="caa_form_group">
+
+
+                                <form th:action="@{/registration}"
+                                      th:object="${partner}" method="POST"
+                                      class="form-horizontal">
+                                    <!-- First name -->
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16"><path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd"d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/></svg></i></span>
+                                        <input type="text" th:field="*{firstName}" placeholder="first name (*)"
+                                               class="form-control" th:errorclass="fieldError" required/>
+                                    </div>
+                                    <div th:if="${#fields.hasErrors('firstName')}"
+                                         style="margin-bottom: 25px" class="text-danger">
+
+                                    </div>
+
+                                    <!-- Last name -->
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                width="16" height="16"
+                                                                                fill="currentColor"
+                                                                                class="bi bi-person-plus-fill"
+                                                                                viewBox="0 0 16 16">
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd"
+        d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+</svg></i></span>
+                                        <input type="text" th:field="*{lastName}" placeholder="last name (*)"
+                                               class="form-control" th:errorclass="fieldError" required/>
+                                    </div>
+                                    <div th:if="${#fields.hasErrors('lastName')}"
+                                         style="margin-bottom: 25px" class="text-danger">
+
+                                    </div>
+
+
+                                    <!-- Email -->
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i
+                                                class="glyphicon glyphicon-envelope"></i></span>
+                                        <input type="email" th:field="*{email}" placeholder="email address (*)"
+                                               class="form-control" th:errorclass="fieldError" required/>
+                                    </div>
+                                    <div th:if="${#fields.hasErrors('email')}"
+                                         style="margin-bottom: 25px" class="text-danger">
+                                    </div>
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                width="16" height="16"
+                                                                                fill="currentColor"
+                                                                                class="bi bi-lock-fill"
+                                                                                viewBox="0 0 16 16">
+  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+</svg></i></span>
+                                        <input type="password" th:field="*{password}" placeholder="password (*)"
+                                               class="form-control" th:errorclass="fieldError" required/>
+                                    </div>
+                                    <div th:if="${#fields.hasErrors('password')}"
+                                         style="margin-bottom: 25px" class="text-danger">
+                                    </div>
+
+
+                                    <!-- Register Button -->
+                                    <div style="margin-top: 10px" class="form-group">
+                                        <div class="col-sm-6 controls">
+                                            <button type="submit" class="btn btn-default acc_btn">
+                                                <span> <i class="fa fa-user btn_icon"></i> Create an account </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="create_account_area">
+                        <form th:action="@{/authenticateTheUser}"
+                              method="POST" class="form-horizontal" style="padding-top: 150px">
+                            <!-- Place for messages: error, alert etc ... -->
+                            <div class="form-group">
+                                <div class="col-xs-15">
+                                    <div>
+                                        <!-- Check for login error -->
+                                        <div th:if="${param.error}">
+                                            <div class="alert alert-danger col-xs-offset-1 col-xs-10">
+                                                Invalid username and password.
+                                            </div>
+                                        </div>
+                                        <!-- Check for logout -->
+                                        <div th:if="${param.logout}">
+                                            <div class="alert alert-success col-xs-offset-1 col-xs-10">
+                                                You have been logged out.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Login Page -->
+                            <div class="login_page_area">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="create_account_area">
+                                                <h2 class="caa_heading">Already registered?</h2>
+                                                <div class="caa_form_area">
+                                                    <div class="caa_form_group">
+                                                        <div class="login_email">
+                                                            <label>Email address</label>
+                                                            <div class="input-area"><input type="email" name="username"/></div>
+                                                        </div>
+                                                        <div class="login_password">
+                                                            <label>Password</label>
+                                                            <div class="input-area"><input type="password" name="password"/></div>
+                                                        </div>
+                                                        <p class="forgot_password">
+                                                            <a href="#" title="Recover your forgotten password" rel="">Forgot your password?</a>
+                                                        </p>
+                                                        <button type="submit" id="acc_Login" class="btn btn-default acc_btn">
+                                                            <span> <i class="fa fa-lock btn_icon"></i> Sign in </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="main" class="home">
+        <div th:replace="/fragments/footer::footer"></div>
+    </div>
+    <div th:replace="/fragments/js_scripts::js"></div>
+</div>
+</body>
+</html>
