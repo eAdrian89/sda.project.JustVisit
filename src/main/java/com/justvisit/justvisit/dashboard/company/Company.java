@@ -1,7 +1,7 @@
 package com.justvisit.justvisit.dashboard.company;
 
 import com.justvisit.justvisit.dashboard.category.Category;
-import com.justvisit.justvisit.dashboard.model.Services;
+import com.justvisit.justvisit.dashboard.services.Services;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,7 +36,7 @@ public class Company {
     @OneToOne
     private Category category;
 
-    @OneToMany
+    @OneToMany(targetEntity = Services.class, mappedBy = "company", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Services> servicesList;
 
 }

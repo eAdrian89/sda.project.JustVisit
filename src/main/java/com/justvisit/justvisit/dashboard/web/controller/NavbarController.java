@@ -10,4 +10,8 @@ public class NavbarController {
     public String showAboutUsPage() {
         return "about";
     }
+    @GetMapping("/showPrices")
+    public String showPrices(){
+        return "redirect:/services/showPrices";
+    }
 }
