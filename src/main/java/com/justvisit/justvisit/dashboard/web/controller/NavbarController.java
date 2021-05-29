@@ -15,7 +15,7 @@ public class NavbarController {
   //      return "redirect:/showPrices";
   //  }
 
-    @GetMapping("/calendar")
+    @GetMapping("/showCalendar")
     public String showCalendar(){
         return "/forms/calendar";
     }
