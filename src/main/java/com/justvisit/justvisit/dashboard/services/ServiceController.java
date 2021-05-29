@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/services")
+@RequestMapping("/")
 public class ServiceController {
 
     private final ServicesRepository servicesRepository;
@@ -22,6 +22,6 @@ public class ServiceController {
     public String serviceList(Model model){
         List<Services> servicesList = servicesRepository.findAll();
         model.addAttribute("service",servicesList);
-        return "/forms/prices";
+        return "/prices";
     }
 }
