@@ -1,5 +1,5 @@
 /*
- 
+
 */
 /*________  Dark Purple  ________  */
 
@@ -151,15 +151,15 @@ select.form-control,
 
 .btn,
 .btn .btn-primary {
-   background: linear-gradient(270deg, rgb(249, 112, 164), rgb(249, 112, 164), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
-   background-size: 300% 300%;
+    background: linear-gradient(270deg, rgb(249, 112, 164), rgb(249, 112, 164), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+    background-size: 300% 300%;
 }
 /*________  Light Purple ________  */
 
 .alert.alert-success,
 .back-to-top,
 .btn,
-.btn-primary:active:focus, .btn-primary:active:hover, 
+.btn-primary:active:focus, .btn-primary:active:hover,
 .spinner > div,
 .btn .btn-primary,
 .our-team3 .social,

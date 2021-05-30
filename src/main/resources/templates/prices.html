@@ -49,6 +49,12 @@
                   <div class="menu-item-description">
                      <td th:text="${services.description}"></td>
                   </div>
+                  <td th:text="${services.id}"></td>
+
+                  <form th:href="${services.name}"
+                           method="post" th:object="${showPrices}">
+
+
             </div>
 
 

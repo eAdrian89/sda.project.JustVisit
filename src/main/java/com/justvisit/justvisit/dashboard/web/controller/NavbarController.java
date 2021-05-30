@@ -10,13 +10,13 @@ public class NavbarController {
     public String showAboutUsPage() {
         return "about";
     }
- //   @GetMapping("/showPrices")
-  //  public String showPrices(){
-  //      return "redirect:/showPrices";
+  //  @GetMapping("/showPrices")
+   // public String showPrices(){
+   //     return "redirect:/showPrices";
   //  }
 
-    @GetMapping("/showCalendar")
-    public String showCalendar(){
-        return "/forms/calendar";
-    }
+   // @GetMapping("/showCalendar")
+   // public String showCalendar(){
+   //     return "/forms/calendar";
+   // }
 }
