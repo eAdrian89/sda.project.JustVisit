@@ -24,11 +24,11 @@ public class ServiceController {
         model.addAttribute("service",servicesList);
         return "/prices";
     }
-    @PostMapping("/showPrices{id}")
-    public String bookDate( Model model, @PathVariable int id){
-       Optional<Services> service = servicesRepository.findById(id);
-       model.addAttribute("service", service);
-               return "redirect:/calendar";
-    }
+   // @PostMapping("/showPrices{id}")
+  //  public String bookDate( Model model, @PathVariable int id){
+   //    Optional<Services> service = servicesRepository.findById(id);
+   //    model.addAttribute("service", service);
+   //            return "redirect:/showCalendar";
+  //  }
 
 }

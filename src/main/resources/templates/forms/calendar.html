@@ -23,7 +23,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="css/calendarStyle.css">
+        <link rel="stylesheet" href="/css/calendarStyle.css">
 
         </head>
         <body>
@@ -121,6 +121,8 @@
                                         <td></td>
                                     </tr>
                                     </tbody>
+
+                                    <div class = "selected" th:action="post" ></div>
                                 </table>
                             </div>
                         </div>
@@ -129,10 +131,10 @@
             </div>
         </section>
 
-        <script src="js/calendarJquery.min.js"></script>
-        <script src="js/calendarPopper.js"></script>
-        <script src="js/calendarBootstrap.min.js"></script>
-        <script src="js/calendarMain.js"></script>
+        <script src="/js/calendarJquery.min.js"></script>
+        <script src="/js/calendarPopper.js"></script>
+        <script src="/js/calendarBootstrap.min.js"></script>
+        <script src="/js/calendarMain.js"></script>
 
 
         <div th:replace="/fragments/footer::footer"></div>

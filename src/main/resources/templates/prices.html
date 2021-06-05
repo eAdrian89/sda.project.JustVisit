@@ -49,10 +49,13 @@
                   <div class="menu-item-description">
                      <td th:text="${services.description}"></td>
                   </div>
-                  <td th:text="${services.id}"></td>
+                  <div class ="menu-item-id">
+                     <td type="hidden"  th:value="${services.id}"></td>
+                  <form th:action="@{/showCalendar/{id}(id=${services.id})}" method="post">
+                     <button type="submit">Book</button>
+                  </form>
+                  </div>
 
-                  <form th:href="${services.name}"
-                           method="post" th:object="${showPrices}">
 
 
             </div>
